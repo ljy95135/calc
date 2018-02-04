@@ -1,6 +1,6 @@
 # calc
 This is a elixir project for Web development course.  
-This caculator only work for integer's + - * /(integer division) and (), so unary operator is not valid.  
+This caculator only works for integer's + - * /(integer division) and (), so unary operator is not valid.  
 
 I not only implement all feature professor required.  
 Like 
@@ -22,12 +22,14 @@ and get the right answer.
   
 Of course, space between numbers is invalid, like 12 34 will be treated as 12 and 34, and raise the error.  
   
-Besides, expression must get some number, so expression like:  
+Besides common invalid input like 1++/2(, expression must get some number, so expression like:  
 &nbsp;&nbsp;(just space or just hit Enter)  
-()(()) (only parenthesis without number) will also raise the exception.  
+()(()) (only parentheses without number) will also raise the exception.  
   
 Handwriting way like 2(1+3) is invalid.  
-
-It may be RuntimeError I raise or ArithmeticError I want (Let it crash), but the program not analyze the details of why this input is invalid.
-
-You may also see test/calc_test.exs to see the test cases which ensure any valid expression with arbitrary space can get right answer.
+  
+It may be RuntimeError I raise or ArithmeticError I want (Let it crash), but the program not analyze the details of why this input is invalid.  
+  
+You may also see test/calc_test.exs to see the test cases which ensure any valid expression with arbitrary space can get right answer.  
+  
+Jiangyi Lin
