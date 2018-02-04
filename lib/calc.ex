@@ -11,7 +11,8 @@ defmodule Calc do
       start the loop
   """
   def main() do
-    eval(IO.gets(""))
+    result = eval(IO.gets(""))
+    IO.puts(result)
     main()
   end
 
@@ -22,8 +23,7 @@ defmodule Calc do
   def eval(str) do
     charList = String.graphemes(str)
     calcList = strToList(charList, [])
-    result = listToResult(calcList, [], [])
-    IO.puts(result)
+    listToResult(calcList, [], [])
   end
 
   # From infix list to result
@@ -149,7 +149,7 @@ defmodule Calc do
       "+" -> x1 + x2
       "-" -> x1 - x2
       "*" -> x1 * x2
-      "/" -> x1 / x2
+      "/" -> div(x1, x2)
       _ -> raise("invalid input")
     end
   end
